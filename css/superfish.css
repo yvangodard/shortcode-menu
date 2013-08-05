@@ -69,6 +69,7 @@
 	
 	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
 }
+
 .sf-menu a {
 	text-decoration: none;
 	zoom: 1; /* IE7 */

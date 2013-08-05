@@ -7,8 +7,7 @@ Tested up to: 3.5.2
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-To display menu's everywhere with effective styling and customization using shortcode.
+Description: To display menu's everywhere with effective styling and customization.
 
 
 == Description ==
@@ -53,11 +52,17 @@ Widget, Yes next version will have directly widget so you need not use copy past
 
 == Changelog ==
 
+= 1.1 =
+* Removed the CSS bugs.
+
 = 1.0 =
 * Initial release.
 
 
 == Upgrade Notice ==
+
+= 1.1 =
+Upgrade for better functinality.
 
 = 1.0 =
 Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Shortcode Menu
 Plugin URI: http://wordpress.org/plugins/shortcode-menu/
-Version: 1.0
+Version: 1.1
 Author:Amit Sukapure
 Author URI: http://in.linkedin.com/in/amitsukapure/
 */
@@ -60,7 +60,6 @@ if(!class_exists('menu_shortcode'))
 				'id' => '',
 				'class' => '',
 				'menu' => '',
-				
 				'list' => 'ul',
 				'display' => 'block',
 				'enhance' => 'true'
@@ -76,6 +75,40 @@ if(!class_exists('menu_shortcode'))
 				
 			if($class != '')
 				$menu_class .= $class;
+				
+				
+			if($enhance == 'true' && $list == 'ul' && $display == 'block')
+			{
+				$menu_class .= ' sf-menu sf-vertical menu_enhance ';
+				add_action('wp_footer',array($this, 'add_script_footer'));
+			}
+			elseif($enhance == 'true' && $list == 'ol' && $display == 'block')
+			{
+				$menu_class .= ' sf-menu sf-vertical enhance_shortcode_menu_list ';
+				add_action('wp_footer',array($this, 'add_script_footer'));
+			}
+			elseif(($enhance == 'true' && $list == 'ol' && $display == 'inline')
+			||($enhance == 'false' && $list == 'ol' && $display == 'inline'))
+			{
+				$menu_class .= ' sf-menu enhance_shortcode_menu_inline_list ';
+				add_action('wp_footer',array($this, 'add_script_footer'));
+			}
+			elseif(($enhance == 'true' && $list == 'ul' && $display == 'inline')
+			||($enhance == 'false' && $list == 'ul' && $display == 'inline'))
+			{
+				$menu_class .= ' sf-menu enhance_shortcode_menu_inline ';
+				add_action('wp_footer',array($this, 'add_script_footer'));
+			}
+			elseif($enhance == 'false' && $list == 'ol' && $display == 'block')
+			{
+				$menu_class .= ' shortcode_menu_list ';
+			}
+			else
+			{
+				$menu_class .= ' ';
+			}
+			
+			/*	
 			
 			if($display == 'inline')
 				$menu_class_display = ' inline_menu ';
@@ -89,7 +122,7 @@ if(!class_exists('menu_shortcode'))
 				if($list == 'ol')
 					$menu_class .= ' enhance_oredered_list ';
 				add_action('wp_footer',array($this, 'add_script_footer'));	
-			}
+			}*/
 			
 			$defaults = array(
 				'theme_location'  => '',
@@ -97,7 +130,7 @@ if(!class_exists('menu_shortcode'))
 				'container'       => 'div',
 				'container_class' => '',
 				'container_id'    => '',
-				'menu_class'      => 'menu',
+				'menu_class'      => 'shortcode_menu',
 				'menu_id'         => '',
 				'echo'            => false,
 				'fallback_cb'     => 'wp_page_menu',
@@ -105,7 +138,7 @@ if(!class_exists('menu_shortcode'))
 				'after'           => '',
 				'link_before'     => '',
 				'link_after'      => '',
-				'items_wrap'      => '<ul id="'.$menu_id.'" class="%2$s '.$menu_class.' '.$menu_class_display.'">%3$s</ul>',
+				'items_wrap'      => '<ul id="'.$menu_id.'" class="%2$s '.$menu_class.'">%3$s</ul>',
 				'depth'           => 0,
 				'walker'          => ''
 			);

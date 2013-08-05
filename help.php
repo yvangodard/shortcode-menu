@@ -57,7 +57,7 @@ function shortcode_menu_help()
                     
                     <tr>
                         <td>Display Style (Optional)<div class="example">( block | inline )</div></td>
-                        <td><input type="checkbox" disabled="disabled" id="shortcode_display"/> Display Inline (Defualt Block)</td>
+                        <td><input type="checkbox" id="shortcode_display"/> Display Inline (Defualt Block)</td>
                     </tr>
                     
                     <tr>
@@ -251,22 +251,12 @@ function shortcode_menu_help()
 		jQuery('#shortcode_display').click(function() {
 			if (jQuery('#shortcode_display').is(':checked'))
 			{
-				jQuery('#shortcode_enhance').attr('checked',false);
-				jQuery('#shortcode_enhance').attr('disabled',true);
+				jQuery('#shortcode_enhance').attr('checked',true);
 			}
-			else
-				jQuery('#shortcode_enhance').attr('disabled',false);
 			generate_shortcode();
 		});
 		
 		jQuery('#shortcode_enhance').click(function() {
-			if (jQuery('#shortcode_enhance').is(':checked'))
-			{
-				jQuery('#shortcode_display').attr('checked',false);
-				jQuery('#shortcode_display').attr('disabled',true);
-			}
-			else
-				jQuery('#shortcode_display').attr('disabled',false);
 			generate_shortcode();
 		});
 		
