@@ -3,7 +3,7 @@ Contributors: amitsukapure
 Donate link: http://www.wpleaf.com/
 Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
-Tested up to: 3.5.2
+Tested up to: 3.6
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
