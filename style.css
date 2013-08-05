@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clear
+{
+	clear:both;	
+}
+.hide
+{
+	display:none;	
+}
+.padding
+{
+	padding:1em !important;	
+}
+input[type="text"]
+{
+	width:100%;
+}	
+
+#menu-short-page .postbox-container
+{
+	width: 47%;
+	margin: 1em;
+}
+#menu-short-page .postbox h3
+{
+	font-size: 15px;
+	font-weight: normal;
+	padding: 7px 10px;
+	margin: 0;
+	line-height: 1;
+	cursor:default;
+}
+#create_table
+{
+	width:100%;	
+}
+
+#create_table td, #create_table th
+{
+	margin-top:0.5em;
+	margin-bottom:1em;
+	padding:1em;
+}
+#create_table th
+{
+	border-bottom:1px dotted #ccc;	
+}
+.field
+{
+	margin-top:0.5em;
+	margin-bottom:1em;
+	border-bottom:1px dotted #ccc;
+	padding: 0 1em 1em;
+}
+.field-last
+{
+	border-bottom:none;	
+}
+#wrap-inside
+{
+	margin-top:2em;
+	padding-top:1em;
+	border-top:1px solid #ccc;	
+}
+.example
+{
+	margin-top:0.5em;
+	font-size:80%;
+}
+
+.full_text
+{
+	width:100% !important;	
+}
+#shortcode
+{
+	background:rgba(139, 255, 139,.3);
+	font-size: 15px;
+	text-align: center;
+	display:none;
+}
+
+.help
+{
+	display:none;
+	position:absolute;
+	left: 120%;
+	background: rgba(256,256,256,1);
+	padding: 1em;
+	top: 20%;
+	width:200px;
+	max-width: 200px;
+	z-index: 999999;
+	box-shadow: 0 0 3px #ccc;
+	border-radius:3px;
+}
+
+.help_button
+{
+	cursor:pointer;
+	position:relative;
+	vertical-align:middle;
+	margin-left:0.5em;
+}
+.help_button img
+{
+	vertical-align:middle;	
+}
+
+.help_button:hover
+{
+	opacity:0.9;	
+}
+
+.mshort-h3
+{
+	margin:0.5em 0 !important;	
+}
+.ui-button-icon-only .ui-button-text
+{
+	line-height: 3px !important;
+	padding-left: 2px !important;
+	text-indent:initial !important;
+	text-shadow: 1px 1px 1px white;
+}
+.plugin_text img
+{
+	box-shadow: 0 0 3px #ccc;
+	margin-top: 1em;	
+}
