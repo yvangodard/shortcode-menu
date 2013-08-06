@@ -7,7 +7,7 @@ Tested up to: 3.6
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Description: To display menu's everywhere with effective styling and customization.
+To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
 
 
 == Description ==
