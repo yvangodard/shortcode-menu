@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Shortcode Menu
-Description: To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
 Plugin URI: http://wordpress.org/plugins/shortcode-menu/
+Description: To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
 Version: 1.1
 Author:Amit Sukapure
 Author URI: http://in.linkedin.com/in/amitsukapure/
