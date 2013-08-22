@@ -6,8 +6,8 @@ $x(".menu_enhance, .enhance_shortcode_menu_list").each(function() {
 	{
 		
 		$x($x("#"+id+" li .sub-menu")).each(function(index,element){
-			var max = $x(this).parent().children("a").width();
-			$x(this).css("left",max+10);
+			var max_w = $x(this).parent().children("a").width();
+			$x(this).css("left",max_w+10);
 		});
 		
 		$x($x("#"+id+" li .sub-menu .sub-menu")).each(function(index,element){
@@ -25,7 +25,7 @@ $x(".enhance_shortcode_menu_inline, .enhance_shortcode_menu_inline_list").each(f
 		
 		//$x($x("#"+id+" li .sub-menu")).each(function(index,element){
 		//	var max = $x(this).parent().children("a").width();
-			$x(this).css("left",max+10);
+			$x(this).css("left",'0');
 		//});
 		
 		$x($x("#"+id+" li .sub-menu .sub-menu")).each(function(index,element){

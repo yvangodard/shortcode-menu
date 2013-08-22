@@ -91,8 +91,8 @@
 	-webkit-transition: color .2s;
 	transition: color .2s;
 }
-.sf-menu ul li {
-	
+.sf-menu ul li, .widget-area .widget .sf-menu ul li{
+	margin-left:0;
 }
 .sf-menu ul ul li {
 	

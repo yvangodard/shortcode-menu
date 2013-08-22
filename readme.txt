@@ -4,7 +4,7 @@ Donate link: http://www.wpleaf.com/
 Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
 Tested up to: 3.6
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
@@ -52,6 +52,10 @@ Widget, Yes next version will have directly widget so you need not use copy past
 
 == Changelog ==
 
+= 1.2 =
+* Removed the CSS bugs.
+* Removed the JS bug.
+
 = 1.1 =
 * Removed the CSS bugs.
 
@@ -60,6 +64,9 @@ Widget, Yes next version will have directly widget so you need not use copy past
 
 
 == Upgrade Notice ==
+
+= 1.2 =
+Upgrade for better functinality.
 
 = 1.1 =
 Upgrade for better functinality.
