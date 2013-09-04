@@ -111,7 +111,23 @@ function shortcode_menu_help()
                
            		</div><!-- .postbox -->
         	</div><!-- .postbox-container -->
+            
         <div class="postbox-container">
+            <div class="postbox">
+            	<h3>Donation</h3>
+                <div class="field field-last">
+                    <form id="paypal_form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                    	You can donate to this plugin using PayPal. Click to donate.<br/>
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="6KENHJ854VL7J">
+                        <input type="image" class="donate" src="<?php echo plugins_url('/images/donate.png',__FILE__); ?>" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+              	</div>
+          	</div>
+     	</div>    
+           
+        <div class="postbox-container clear">
             <div class="postbox">
                 <h3>Shortcodes</h3>
                 <div class="field">
@@ -143,7 +159,9 @@ function shortcode_menu_help()
            
            	</div><!-- .postbox -->
        </div><!-- .postbox-container -->
-           
+     	
+        
+        
     	
            
     </div><!-- wrap -->
