@@ -52,6 +52,10 @@ Widget, Yes next version will have directly widget so you need not use copy past
 
 == Changelog ==
 
+= 1.3 =
+* Used wp_register_script
+* Warning Free Plugin
+
 = 1.2 =
 * Removed the CSS bugs.
 * Removed the JS bug.
@@ -64,6 +68,9 @@ Widget, Yes next version will have directly widget so you need not use copy past
 
 
 == Upgrade Notice ==
+
+= 1.3 = 
+Upgrade will remove warnings. Error free logs.
 
 = 1.2 =
 Upgrade for better functinality.

@@ -4,7 +4,7 @@ function shortcode_menu_help()
 ?>
 	<div id="menu-short-page" class="wrap">
     	<div id="icon-edit" class="icon32 icon32-posts-post"><br></div>
-        <h2>Menu Shortcode Help</h2>
+        <h2>Shortcode Menu Help</h2>
         <div class="clear"></div>
         
 		<?php 
@@ -17,13 +17,12 @@ function shortcode_menu_help()
         
         <div class="postbox-container">
             <div class="postbox">
-                <h3>Create Your Shortcode</h3>
                 <table id="create_table">
                     <tr>
                         <th colspan="2">Create Your Shortcode</th>
                     </tr>
                     <tr>
-                        <td>Select Menu</td>
+                        <td><label>Select Menu</label></td>
                         <td>
                             <select id="menu_name" onchange="generate_shortcode()">
                                         <option value="Select">-- Select Menu --</option>
@@ -40,33 +39,35 @@ function shortcode_menu_help()
                     </tr>
                     
                     <tr>
-                        <td>Menu ID (Optional)</td>
+                        <td><label>Menu ID (Optional)</label></td>
                         <td><input type="text" class="full_text" value="" id="shortcode_id" placeholder="Menu ID" onchange="generate_shortcode();" /></td>
                     </tr>
                     
                     <tr>
-                        <td>Menu Class (Optional)</td>
+                        <td><label>Menu Class (Optional)</label></td>
                         <td><input type="text" class="full_text" value="" id="shortcode_class" placeholder="Menu Class" onchange="generate_shortcode();"/></td>
                     </tr>
                     
 					<tr>
                         <td>List Style (Optional)<div class="example">( Ordered | Unordered )</div></td>
-                        <td><input type="checkbox" id="shortcode_list"/> Ordered List Style (Defualt Unordered)</td>
+                        <td><label for="shortcode_list"><input type="checkbox" id="shortcode_list"/> Ordered List Style (Defualt Unordered)</label></td>
                     </tr>
                     
                     
                     <tr>
                         <td>Display Style (Optional)<div class="example">( block | inline )</div></td>
-                        <td><input type="checkbox" id="shortcode_display"/> Display Inline (Defualt Block)</td>
+                        <td><input type="checkbox" id="shortcode_display"/><label for="shortcode_display"> Display Inline (Defualt Block)</label></td>
                     </tr>
                     
                     <tr>
                         <td>Enhance (Optional) <div class="example">( true | false )</div></td>
-                        <td><input checked="checked" type="checkbox" id="shortcode_enhance"/> Enhance List (Defualt true)</td>
+                        <td><input checked="checked" type="checkbox" id="shortcode_enhance"/><label for="shortcode_enhance"> Enhance List (Defualt true)</label></td>
                     </tr>
                     
                     <tr>
-                        <td id="shortcode" colspan="2"></td>
+                        <td colspan="2">
+                        <p id="help-text" style="font-size:x-small"></p>
+                        <textarea class="sm-area" readonly="readonly" id="shortcode"></textarea></td>
                     </tr>
                 </table>
             </div><!-- .postbox -->
@@ -117,7 +118,7 @@ function shortcode_menu_help()
             	<h3>Donation</h3>
                 <div class="field field-last">
                     <form id="paypal_form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    	You can donate to this plugin using PayPal. Click to donate.<br/>
+                    	Enjoyed this plugin? You can donate to this plugin using PayPal. Click to donate.<br/>
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="6KENHJ854VL7J">
                         <input type="image" class="donate" src="<?php echo plugins_url('/images/donate.png',__FILE__); ?>" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
@@ -254,6 +255,7 @@ function shortcode_menu_help()
 			var shortcode = shortcode_start+shortcode_menu+shortcode_id+shortcode_class+shortcode_display+shortcode_list+shortcode_enhance+shortcode_end;
 			if(menu != 'Select')
 			{
+				jQuery('#help-text').html('Now just copy and paste into anywhere');
 				jQuery("#shortcode").fadeOut("fast", function()
 				{
 				  jQuery('#shortcode').text(shortcode).fadeIn('slow');
@@ -263,6 +265,7 @@ function shortcode_menu_help()
 			{
 				jQuery('#shortcode').fadeOut('slow');
 				jQuery('#shortcode').text('');
+				jQuery('#help-text').html('');
 			}
 		}
 		
@@ -288,7 +291,6 @@ function shortcode_menu_help()
 		{
 			jQuery("#"+id+"_content").dialog({ 
 				modal: true,
-				show:'slow',
 				title: "Help",
 				width: 'auto',
 				closeText: '&times;',

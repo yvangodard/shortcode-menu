@@ -72,9 +72,10 @@
 }
 #shortcode
 {
-	background:rgba(139, 255, 139,.3);
+	background: rgba(173, 173, 173, 0.3);
 	font-size: 15px;
 	text-align: center;
+	text-shadow: 1px 1px 1px white;
 	display:none;
 }
 .help
@@ -131,3 +132,4 @@
 {
 	padding-top:0.5em;	
 }
+textarea.sm-area { width:100%; max-width:100%; padding:10px}

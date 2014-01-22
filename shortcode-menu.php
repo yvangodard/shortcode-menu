@@ -3,11 +3,11 @@
 Plugin Name: Shortcode Menu
 Plugin URI: http://wordpress.org/plugins/shortcode-menu/
 Description: To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
-Version: 1.2
+Version: 1.3
 Author:Amit Sukapure
 Author URI: http://in.linkedin.com/in/amitsukapure/
 */
-/*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
+/*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : amit.sukapure89@gmail.com)
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
     published by the Free Software Foundation.
@@ -19,7 +19,6 @@ Author URI: http://in.linkedin.com/in/amitsukapure/
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-global $style;
 if(!class_exists('menu_shortcode'))
 {
 	class menu_shortcode
@@ -28,31 +27,51 @@ if(!class_exists('menu_shortcode'))
 		{
 			require 'help.php';
 			add_action('admin_menu',array($this, 'add_shortcode_menu'));
-			add_action('wp_enqueue_scripts', array($this, 'menushort_template_stylesheet'));
-			add_action('admin_enqueue_scripts', array($this, 'menushort_admin_stylesheet'));
+			add_action('wp_enqueue_scripts', array($this, 'menushort_template_scripts_styles'));
+			add_action('admin_enqueue_scripts', array($this, 'menushort_admin_scripts_styles'));
 			add_shortcode('shortmenu', array($this,'display_shortcode_menu'));
-		}
-		
-		function run_menu_shortcode_activation()
-		{
-			wp_enqueue_script( 'jquery-ui-core' );
-    		wp_enqueue_script( 'jquery-ui-dialog' );
-			wp_enqueue_style( 'jquery-ui-style-plugin', plugins_url( '/css/jquery-ui.css',__FILE__) );
 		}
 		
 		function add_shortcode_menu()
 		{
-			add_menu_page('Shortcode Menus', 'Shortcode Menus', 'administrator', 'short_menu', 'shortcode_menu_help','',31 );	
+			add_menu_page('Shortcode Menu', 'Shortcode Menu', 'administrator', 'shortcode-menu', 'shortcode_menu_help','',31 );	
 		}
 		
-		function menushort_template_stylesheet()
+		function menushort_template_scripts_styles()
 		{
-			wp_enqueue_style( 'menushort-style', plugins_url('shortcode-menu.css', __FILE__) );
+			wp_enqueue_script( 'jquery-ui-core' );
+    		wp_enqueue_script( 'jquery-ui-dialog' );
+			wp_register_style('jquery-ui-style-plugin', plugins_url( '/css/jquery-ui.css',__FILE__));
+			wp_enqueue_style( 'jquery-ui-style-plugin' );
+			
+			wp_register_script('enhance-script-menu', plugins_url('js/superfish.js', __FILE__));
+			wp_register_script('enhance-script-menu-hover', plugins_url('js/hoverIntent.js', __FILE__));
+			wp_register_script('enhance-script-enhance-menu', plugins_url('js/enhance.menu.js', __FILE__));
+			
+			wp_enqueue_script('enhance-script-menu');
+			wp_enqueue_script('enhance-script-menu-hover');
+			wp_enqueue_script('enhance-script-enhance-menu');
+			
+			wp_register_style('enhance-style', plugins_url('css/superfish.css', __FILE__));
+			wp_register_style('enhance-style-vertical', plugins_url('css/superfish-vertical.css', __FILE__));
+			
+			wp_enqueue_style('enhance-style');
+			wp_enqueue_style('enhance-style-vertical');
+			
+			wp_register_style('menushort-style', plugins_url('shortcode-menu.css', __FILE__));
+			wp_enqueue_style( 'menushort-style' );
 		}
 		
-		function menushort_admin_stylesheet()
+		function menushort_admin_scripts_styles()
 		{
-			wp_enqueue_style( 'menushort-admin-style', plugins_url('style.css', __FILE__) );
+			wp_enqueue_script( 'jquery-ui-core' );
+    		wp_enqueue_script( 'jquery-ui-dialog' );
+			
+			wp_register_style('jquery-ui-style-plugin', plugins_url( '/css/jquery-ui.css',__FILE__));
+			wp_enqueue_style( 'jquery-ui-style-plugin' );
+			
+			wp_register_style('menushort-admin-style', plugins_url('style.css', __FILE__));
+			wp_enqueue_style( 'menushort-admin-style' );
 		}
 		
 		function display_shortcode_menu($attr)
@@ -81,24 +100,20 @@ if(!class_exists('menu_shortcode'))
 			if($enhance == 'true' && $list == 'ul' && $display == 'block')
 			{
 				$menu_class .= ' sf-menu sf-vertical menu_enhance ';
-				add_action('wp_footer',array($this, 'add_script_footer'));
 			}
 			elseif($enhance == 'true' && $list == 'ol' && $display == 'block')
 			{
 				$menu_class .= ' sf-menu sf-vertical enhance_shortcode_menu_list ';
-				add_action('wp_footer',array($this, 'add_script_footer'));
 			}
 			elseif(($enhance == 'true' && $list == 'ol' && $display == 'inline')
 			||($enhance == 'false' && $list == 'ol' && $display == 'inline'))
 			{
 				$menu_class .= ' sf-menu enhance_shortcode_menu_inline_list ';
-				add_action('wp_footer',array($this, 'add_script_footer'));
 			}
 			elseif(($enhance == 'true' && $list == 'ul' && $display == 'inline')
 			||($enhance == 'false' && $list == 'ul' && $display == 'inline'))
 			{
 				$menu_class .= ' sf-menu enhance_shortcode_menu_inline ';
-				add_action('wp_footer',array($this, 'add_script_footer'));
 			}
 			elseif($enhance == 'false' && $list == 'ol' && $display == 'block')
 			{
@@ -108,22 +123,6 @@ if(!class_exists('menu_shortcode'))
 			{
 				$menu_class .= ' ';
 			}
-			
-			/*	
-			
-			if($display == 'inline')
-				$menu_class_display = ' inline_menu ';
-			else
-				$menu_class_display = '';
-			if($list == 'ol')
-				$menu_class_display .= ' oredered_list ';
-			if($enhance == 'true')
-			{
-				$menu_class .= ' menu_enhance sf-menu sf-vertical ';
-				if($list == 'ol')
-					$menu_class .= ' enhance_oredered_list ';
-				add_action('wp_footer',array($this, 'add_script_footer'));	
-			}*/
 			
 			$defaults = array(
 				'theme_location'  => '',
@@ -145,14 +144,6 @@ if(!class_exists('menu_shortcode'))
 			);
 			return wp_nav_menu( $defaults ).'<div class="clear"></div>';
 		}
-		function add_script_footer()
-		{
-			wp_enqueue_style('enhance-style', plugins_url('css/superfish.css', __FILE__));
-			wp_enqueue_style('enhance-style-vertical', plugins_url('css/superfish-vertical.css', __FILE__));
-			wp_enqueue_script('enhance-script-menu', plugins_url('js/superfish.js', __FILE__));
-			wp_enqueue_script('enhance-script-menu-hover', plugins_url('js/hoverIntent.js', __FILE__));
-			wp_enqueue_script('enhance-script-enhance-menu', plugins_url('js/enhance.menu.js', __FILE__));
-		}
 	}
 }
 add_filter( 'widget_text', 'shortcode_unautop');
@@ -160,6 +151,5 @@ add_filter( 'widget_text', 'do_shortcode');
 if(class_exists('menu_shortcode'))
 {
 	$menu_shortcode = new menu_shortcode;
-	$menu_shortcode->run_menu_shortcode_activation();	
 }
 ?>
