@@ -1,10 +1,10 @@
 === Shortcode Menu ===
 Contributors: amitsukapure
-Donate link: http://www.wpleaf.com/
+Donate link: http://accelance-r.com/shortcode-menu-wordpress-plugin/#donate
 Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
-Tested up to: 3.6
-Stable tag: 1.2
+Tested up to: 3.8
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
