@@ -1,13 +1,14 @@
 === Shortcode Menu ===
 Contributors: amitsukapure
 Donate link: http://accelance-r.com/shortcode-menu-wordpress-plugin/#donate
-Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Advanced Menu, Enhance Menu
+Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Post Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
 Tested up to: 3.8
 Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
+
+Display your menu anywhere in simple and quick steps.  
 
 
 == Description ==
@@ -19,13 +20,13 @@ We have added the option of display style so users can display menu inline or bl
 
 The main feature is that, we have enhanced the sub menu to display it more effectively. You can disable this feature.
 
-To create your shortcode without writing any code. Just use our shortcode creator for your menu.
+We will create your shortcode for you in just simpple steps.
 
 == Installation ==
 
 1. Upload 'menu-shortcode' folder to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to 'Shortcode Menus' tab.
+3. Go to 'Shortcode Menu' tab.
 4. Create the shortcode.
 5. Copy the shortcode and paste in your widgets, posts or pages.
 
@@ -37,6 +38,10 @@ Yes, We have Custom Menu widget provided by Wordpress. But you cannot customize 
 You can use your custom id, class for menu.
 You can display your menu inline.
 You can enhance your sub menu styling.
+
+= Why there is not widget? =
+
+No issues, use text widget. Just copy-paste your shortcode.
 
 = What will have in our next version? =
 
