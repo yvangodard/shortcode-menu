@@ -8,7 +8,7 @@ Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Display your menu anywhere in simple and quick steps.  
+Display your menu anywhere in simple and quick steps. 
 
 
 == Description ==
