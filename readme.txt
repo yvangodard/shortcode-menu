@@ -24,7 +24,7 @@ We will create your shortcode for you in just simpple steps.
 
 == Installation ==
 
-1. Upload 'menu-shortcode' folder to the '/wp-content/plugins/' directory
+1. Upload 'shortcode-menu' folder to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Go to 'Shortcode Menu' tab.
 4. Create the shortcode.
