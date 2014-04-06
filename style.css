@@ -6,7 +6,7 @@
 }
 .hide
 {
-	display:none;	
+	display:none !important;
 }
 .padding
 {
@@ -33,12 +33,18 @@
 #create_table
 {
 	width:100%;	
+	font-size:14px;
 }
 #create_table td, #create_table th
 {
 	margin-top:0.5em;
 	margin-bottom:1em;
 	padding:1em;
+	vertical-align: top;
+}
+#create_table td input[type=checkbox], #create_table td input[type=radio]
+{
+	vertical-align:top
 }
 #create_table th
 {
@@ -77,6 +83,7 @@
 	text-align: center;
 	text-shadow: 1px 1px 1px white;
 	display:none;
+	min-height:130px;
 }
 .help
 {
@@ -133,3 +140,69 @@
 	padding-top:0.5em;	
 }
 textarea.sm-area { width:100%; max-width:100%; padding:10px}
+.wpsm-highlighter-row
+{
+	text-align: center;
+	background: #F1F1F1;
+	padding: 0 !important;
+	border-radius: 3px;
+}
+.wpsm-highlighter-row span
+{
+	background: white;
+	padding: 2px 10px;
+	font-weight: bold;
+	line-height: normal;
+}
+
+#create_table label
+{
+	vertical-align:top
+}
+#create_table .wp-color-result
+{
+	float: left;
+}
+#create_table .wp-picker-open+.wp-picker-input-wrap
+{
+	float: left;
+	width: 130px;
+}
+#create_table .color-picker
+{
+	width:80px !important;
+}
+#create_table .wp-picker-holder
+{
+	clear:both;
+}
+.disabled-color
+{
+	border:1px solid red
+}
+.toplevel_page_shortcode-menu code {display:block}
+.toplevel_page_shortcode-menu code strong { font-weight:bold; line-height:20px; }
+.toplevel_page_shortcode-menu .inner { padding:1em; }
+.field {margin-bottom:1em}
+.field input[type="text"], .field textarea
+{
+	max-width:100%;
+	width:100%;
+}
+.field label
+{
+	margin-bottom:5px;
+	display:block;
+}
+.wpsm-message
+{
+	padding:10px;
+}
+#server_msg > div
+{
+	background: rgb(255, 246, 212);
+	padding: 10px;
+	border: 1px solid rgb(255, 222, 52);
+	border-radius: 3px;
+	margin-bottom: 2em;
+}

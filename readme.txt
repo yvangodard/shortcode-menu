@@ -4,7 +4,7 @@ Donate link: http://accelance-r.com/shortcode-menu-wordpress-plugin/#donate
 Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Post Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.4
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ We have added the option of display style so users can display menu inline or bl
 
 The main feature is that, we have enhanced the sub menu to display it more effectively. You can disable this feature.
 
-We will create your shortcode for you in just simpple steps.
+We will create your shortcode for you in just simple steps.
 
 == Installation ==
 
@@ -31,6 +31,11 @@ We will create your shortcode for you in just simpple steps.
 5. Copy the shortcode and paste in your widgets, posts or pages.
 
 == Frequently Asked Questions ==
+
+= My menu design collapse after updated to 2.0 =
+
+We have added custom styling of menu. Just go to our menu create newly shortcode and replace with old one.
+Note - If you want exactly same as previous design just select your menu and copy-paste with your previous shortcode.
 
 = Why should I use it as we are having Custom Menu widget? =
 
@@ -43,19 +48,20 @@ You can enhance your sub menu styling.
 
 No issues, use text widget. Just copy-paste your shortcode.
 
-= What will have in our next version? =
-
-Widget, Yes next version will have directly widget so you need not use copy paste your shortcode in Text Widget.
-
 
 == Screenshots ==
 
 1. Example of the Simple Enhanced menu.
 2. Example of the Inline display menu.
-3. Example of the Ordered List menu.
-4. Easy creating Shortcodes.
+3. Easy creating Shortcodes.
 
 == Changelog ==
+
+= 2.0 =
+* Quick design menu
+* Solved superfish conflict (Superfish removed).
+* Custom css
+* Quick support form
 
 = 1.4 =
 * Fixed jquery-ui css bugs
@@ -76,6 +82,12 @@ Widget, Yes next version will have directly widget so you need not use copy past
 
 
 == Upgrade Notice ==
+
+= 2.0 =
+Use custom CSS. Quick design your menu. Solved superfish conflict.
+
+= 1.4 =
+Remove jquery-ui css errors
 
 = 1.3 = 
 Upgrade will remove warnings. Error free logs.
