@@ -240,6 +240,45 @@ function shortcode_menu_help()
                         
                         }
                         </code>
+                        <code><strong>/* sub menu without arrow */</strong></code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.menu_enhance ul
+                        {
+                            
+                        }</code>
+                        <code><strong>/* enhance sub menu with arrow */</strong></code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.menu_enhance ul.wpsm-arrow-enabled.wpsm-left-arrow
+                        {
+                            
+                        }</code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.menu_enhance ul.wpsm-arrow-enabled.wpsm-left-arrow ul.wpsm-arrow-enabled.wpsm-left-arrow
+                        {
+                            
+                        }</code>
+                        <code><strong>/* inline sub menu without arrow */</strong></code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul
+                        {
+                            
+                        }</code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul ul
+                        {
+                            
+                        }</code>
+                        <code><strong>/* inline sub menu with arrow */</strong></code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul.wpsm-arrow-enabled.wpsm-up-arrow
+                        {
+                           
+                        }</code>
+                        <code>
+                        .shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul.wpsm-arrow-enabled.wpsm-left-arrow
+                        {
+                            
+                        }</code>
                         
                     </div>
                

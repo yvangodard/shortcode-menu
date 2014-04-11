@@ -124,10 +124,7 @@
     -moz-transition:        opacity 0.5s linear;
     -o-transition:          opacity 0.5s linear;
 }
-.enhance_shortcode_menu_inline ul ul
-{
-	top:0;
-}
+
 .enhance_shortcode_menu_inline ul li 
 {
 	display: block;
@@ -305,4 +302,45 @@
 }
 .wpsm-icon-arrow-right:before {
 	content: "\e603";
+}
+
+/* sub menu without arrow */
+.shortcode_menu.wpsm-menu.menu_enhance ul
+{
+	top:0;
+	left:100%;
+}
+
+/* enhance sub menu with arrow */
+.shortcode_menu.wpsm-menu.menu_enhance ul.wpsm-arrow-enabled.wpsm-left-arrow
+{
+	left:120%;
+}
+.shortcode_menu.wpsm-menu.menu_enhance ul.wpsm-arrow-enabled.wpsm-left-arrow ul.wpsm-arrow-enabled.wpsm-left-arrow
+{
+	left:108%;
+}
+
+/* inline sub menu without arrow */
+.shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul
+{
+	top:100%;
+	left:0;
+}
+.shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul ul
+{
+	top:0;
+	left:100%;
+}
+
+/* inline sub menu with arrow */
+.shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul.wpsm-arrow-enabled.wpsm-up-arrow
+{
+	top:140%;
+	left:0;
+}
+.shortcode_menu.wpsm-menu.enhance_shortcode_menu_inline ul.wpsm-arrow-enabled.wpsm-left-arrow
+{
+	top:0;
+	left:110%;
 }

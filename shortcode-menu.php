@@ -3,11 +3,11 @@
 Plugin Name: Shortcode Menu
 Plugin URI: http://wordpress.org/plugins/shortcode-menu/
 Description: To display menu's everywhere like sidebar, header, footer, pages, posts or theme template with effective styling and customization using shortcode.
-Version: 2.0
+Version: 2.1
 Author:Amit Sukapure
 Author URI: http://in.linkedin.com/in/amitsukapure/
 */
-/*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : amit.sukapure@gmail.com)
+/*  Copyright 2014 Shortcode Menu (email : amit.sukapure@gmail.com)
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
     published by the Free Software Foundation.

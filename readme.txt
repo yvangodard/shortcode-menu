@@ -4,12 +4,11 @@ Donate link: http://accelance-r.com/shortcode-menu-wordpress-plugin/#donate
 Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Post Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Display your menu anywhere in simple and quick steps. 
-
 
 == Description ==
 
@@ -57,6 +56,9 @@ No issues, use text widget. Just copy-paste your shortcode.
 
 == Changelog ==
 
+= 2.1 = 
+* Fully customizable CSS
+
 = 2.0 =
 * Quick design menu
 * Solved superfish conflict (Superfish removed).
@@ -82,6 +84,9 @@ No issues, use text widget. Just copy-paste your shortcode.
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+No more overriding CSS conflicts. Customize your menu with provided CSS
 
 = 2.0 =
 Use custom CSS. Quick design your menu. Solved superfish conflict.
