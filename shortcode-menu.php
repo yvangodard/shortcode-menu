@@ -43,10 +43,8 @@ if(!class_exists('menu_shortcode'))
 			wp_enqueue_script('jquery');
 			
 			wp_register_script('enhance-script-enhance-menu', plugins_url('js/enhance.menu.js', __FILE__));
-			wp_enqueue_script('enhance-script-enhance-menu');
-			
-			wp_register_style('menushort-style', plugins_url('shortcode-menu.css', __FILE__));
-			wp_enqueue_style( 'menushort-style' );
+			wp_register_script('enhance-script-shortcode-menu-responsive', plugins_url('js/tinynav.min.js', __FILE__));
+			wp_register_style('shortcode-menu-style', plugins_url('shortcode-menu.css', __FILE__));
 		}
 		
 		function menushort_admin_scripts_styles()
@@ -66,6 +64,9 @@ if(!class_exists('menu_shortcode'))
 		
 		function display_shortcode_menu($attr)
 		{
+			wp_enqueue_script('enhance-script-enhance-menu');
+			wp_enqueue_script('enhance-script-shortcode-menu-responsive');
+			wp_enqueue_style( 'shortcode-menu-style' );
 			extract( shortcode_atts( array(
 				'id' => '',
 				'class' => '',
@@ -81,7 +82,8 @@ if(!class_exists('menu_shortcode'))
 				'submenu_anchor_hover_color' => '',
 				'submenu_transparency' => '',
 				'arrow' => 'true',
-				'css' => ''
+				'css' => '',
+				'responsive' => '650'
 			), $attr ) );
 			
 			$list = 'ul';
@@ -189,7 +191,33 @@ if(!class_exists('menu_shortcode'))
 				#'.$menu_id.' ul a:hover { '.$submenu_anchor_hover_color_style.' }
 				'.$css.'
 			</style>
-			<script type="text/javascript">var show_arrow = "'.$arrow.'"</script>';
+			<script type="text/javascript">
+				var show_arrow = "'.$arrow.'";
+				var $sm = jQuery.noConflict();
+				jQuery(function ($) {
+					$("#'.$menu_id.'").tinyNav();
+					$("#'.$menu_id.'").next().addClass("shortcode-menu-mobile");
+					
+					shortcode_menu_responsive();
+				});
+				jQuery(window).resize(function($){
+					shortcode_menu_responsive();
+				});
+				function shortcode_menu_responsive()
+				{
+					var window_width = $sm(window).width();
+					if(window_width <= '.$responsive.')
+					{
+						$sm("#'.$menu_id.'").hide();
+						$sm("#'.$menu_id.'").next().show();
+					}
+					else
+					{
+						$sm("#'.$menu_id.'").show();
+						$sm("#'.$menu_id.'").next().hide();
+					}
+				}
+			</script>';
 		}
 		
 		function wpsm_hex2rgb($hex) 

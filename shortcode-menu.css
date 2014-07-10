@@ -9,6 +9,10 @@
 	margin:0.5em 0;
 	padding:0;
 }
+.shortcode-menu-mobile {
+	display:none;
+	max-width:100%;
+}
 
 /* vertical */
 .wpsm-menu, .wpsm-menu ul, .wpsm-menu ul ul

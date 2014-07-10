@@ -3,8 +3,8 @@ Contributors: amitsukapure
 Donate link: http://accelance-r.com/shortcode-menu-wordpress-plugin/#donate
 Tags: Menu, Shortcode, Custom Menu, Menu Shortcode, Sidebar Menu, Page Menu, Post Menu, Advanced Menu, Enhance Menu
 Requires at least: 3.0.1
-Tested up to: 3.9
-Stable tag: 2.1
+Tested up to: 3.9.1
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,11 @@ No issues, use text widget. Just copy-paste your shortcode.
 
 == Changelog ==
 
+= 3.0 =
+* Responsive support
+* Resolve jQuery-ui admin issues
+* Enqueue scripts and styles when shortcode used
+
 = 2.1 = 
 * Fully customizable CSS
 
@@ -84,6 +89,10 @@ No issues, use text widget. Just copy-paste your shortcode.
 
 
 == Upgrade Notice ==
+
+= 3.0 =
+Fully responsive menu with customized breakpoint
+Enqueue scripts and styles only when shortcode used
 
 = 2.1 =
 No more overriding CSS conflicts. Customize your menu with provided CSS

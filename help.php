@@ -109,12 +109,19 @@ function shortcode_menu_help()
                         <td>Custom CSS (Optional)</div></td>
                         <td><textarea id="sm_custom_css" name="sm_custom_css" onchange="generate_shortcode();"></textarea></td>
                     </tr>
-                    
+                    <tr>
+                    	<td colspan="2" class="wpsm-highlighter-row"><span>Responsive Menu</span></td>
+                    </tr>
+                    <tr class="hide-field">
+                        <td>Display Mobile Menu Breakpoint (Optional)</div></td>
+                        <td><input type="number" id="shortcode_mobile_breakpoint" placeholder="650" onchange="generate_shortcode();"/>px (Defualt 650px)</td>
+                    </tr>
                     <tr>
                         <td colspan="2">
                         <p id="help-text" style="font-size:x-small"></p>
                         <textarea class="sm-area" readonly="readonly" id="shortcode"></textarea></td>
                     </tr>
+                    
                 </table>
             </div><!-- .postbox -->
       	</div><!-- .postbox-container -->
@@ -511,8 +518,14 @@ function shortcode_menu_help()
 				var shortcode_sm_custom_css = ' css="'+sm_custom_css+'" ';
 			else
 				var shortcode_sm_custom_css = '';
+				
+			var sm_responsive_breakpoint = jQuery('#shortcode_mobile_breakpoint').val();
+			if(sm_responsive_breakpoint != '')
+				var shortcode_sm_responsive_breakpoint = ' responsive="'+sm_responsive_breakpoint+'" ';
+			else
+				var shortcode_sm_responsive_breakpoint = '';
 			
-			var shortcode = shortcode_start+shortcode_menu+shortcode_id+shortcode_class+shortcode_display+shortcode_list+shortcode_enhance+shortcode_menu_color+shortcode_menu_anchor_color+shortcode_menu_anchor_hover_color+shortcode_submenu_color+shortcode_submenu_anchor_color+shortcode_submenu_anchor_hover_color+submenu_transparency_code+shortcode_arrow+shortcode_sm_custom_css+shortcode_end;
+			var shortcode = shortcode_start+shortcode_menu+shortcode_id+shortcode_class+shortcode_display+shortcode_list+shortcode_enhance+shortcode_menu_color+shortcode_menu_anchor_color+shortcode_menu_anchor_hover_color+shortcode_submenu_color+shortcode_submenu_anchor_color+shortcode_submenu_anchor_hover_color+submenu_transparency_code+shortcode_arrow+shortcode_sm_responsive_breakpoint+shortcode_sm_custom_css+shortcode_end;
 			if(menu != 'Select')
 			{
 				jQuery('#help-text').html('Now just copy and paste anywhere');
